@@ -1,4 +1,4 @@
-# Raman-Assignment - Project
+# Raman-Assignment
 
 ## Tech used
 
