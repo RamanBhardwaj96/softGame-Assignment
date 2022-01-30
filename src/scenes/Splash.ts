@@ -26,6 +26,13 @@ export default class Splash extends Scene implements IScene {
             wild_green: "assets/images/cards/wild_green.png",
             wild_red: "assets/images/cards/wild_red.png",
             wild_yellow: "assets/images/cards/wild_yellow.png",
+
+            fire1: "assets/images/fireParticles/fire1.png",
+            fire2: "assets/images/fireParticles/fire2.png",
+            fire3: "assets/images/fireParticles/fire3.png",
+            fire4: "assets/images/fireParticles/fire4.png",
+            fire5: "assets/images/fireParticles/fire5.png"
+
         };
 
         // Start loading game assets

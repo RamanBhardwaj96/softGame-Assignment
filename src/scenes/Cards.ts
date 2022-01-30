@@ -95,7 +95,6 @@ export default class Cards extends Scene implements IScene {
                 this._flippedCards[index].scale = this._cardStack.scale;
             }
         }
-
         this.playCardFlipAnimation();
     }
 
