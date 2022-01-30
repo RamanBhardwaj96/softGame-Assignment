@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "gsap": "^3.7.0",
+    "pixi-fps": "^2.0.1",
     "pixi-scenes": "^1.4.0",
     "pixi.js": "^5.1.3"
   },
