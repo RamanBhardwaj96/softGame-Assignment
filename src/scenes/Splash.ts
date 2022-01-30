@@ -19,7 +19,6 @@ export default class Splash extends Scene implements IScene {
 
         const assets: { [name: string]: string } = {
             stack: "assets/images/Stack.png",
-            BG: "assets/images/BG.png",
             back: "assets/images/cards/back.png",
             wild_black: "assets/images/cards/wild_black.png",
             wild_blue: "assets/images/cards/wild_blue.png",
@@ -31,7 +30,8 @@ export default class Splash extends Scene implements IScene {
             fire2: "assets/images/fireParticles/fire2.png",
             fire3: "assets/images/fireParticles/fire3.png",
             fire4: "assets/images/fireParticles/fire4.png",
-            fire5: "assets/images/fireParticles/fire5.png"
+            fire5: "assets/images/fireParticles/fire5.png",
+            bunny: "assets/images/bunny.png"
 
         };
 

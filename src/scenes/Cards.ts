@@ -58,6 +58,7 @@ export default class Cards extends Scene implements IScene {
             });
         });
     }
+
     private createCards(): void {
         this._cardStack = new PIXI.Sprite(Loader.getAsset("game", "stack").texture);
         this._cardStack.anchor.set(0.5);
