@@ -18,6 +18,14 @@ export default class Splash extends Scene implements IScene {
     public init(): void {
 
         const assets: { [name: string]: string } = {
+            stack: "assets/images/Stack.png",
+            BG: "assets/images/BG.png",
+            back: "assets/images/cards/back.png",
+            wild_black: "assets/images/cards/wild_black.png",
+            wild_blue: "assets/images/cards/wild_blue.png",
+            wild_green: "assets/images/cards/wild_green.png",
+            wild_red: "assets/images/cards/wild_red.png",
+            wild_yellow: "assets/images/cards/wild_yellow.png",
         };
 
         // Start loading game assets
@@ -64,6 +72,6 @@ export default class Splash extends Scene implements IScene {
     }
 
     private openMenu(): void {
-        this.scenes.start('menu');
+        this.scenes.start('Menu');
     }
 }

@@ -4,9 +4,11 @@ import Scale from "./utils/Scale";
 import Resize from "./utils/Resize";
 import Splash from "./scenes/Splash";
 import Menu from "./scenes/Menu";
-import Gameplay from "./scenes/Gameplay";
 import Throttle from "./utils/Throttle";
 import IScene from "./scenes/IScene";
+import Cards from "./scenes/Cards";
+import ImagesAndText from "./scenes/ImagesAndText";
+import Fire from "./scenes/Fire";
 
 let app: PIXI.Application,
     scenes: SceneManager
@@ -33,12 +35,14 @@ function setup(): void {
 
     // Add all scenes
     scenes = new SceneManager(app);
-    scenes.add('splash', new Splash());
-    scenes.add('menu', new Menu());
-    scenes.add('gameplay', new Gameplay());
+    scenes.add('Splash', new Splash()); // loader
+    scenes.add('Menu', new Menu()); // showsOption
+    scenes.add('Cards', new Cards()); // option-1 cards
+    scenes.add('ImageAndText', new ImagesAndText()); //option-2 imagesAndText
+    scenes.add('Fire', new Fire()); // opttion-3 fireAnim
 
     // Start loading
-    scenes.start('splash');
+    scenes.start('Splash');
 
     // Handle various window events
     window.addEventListener('resize', Throttle(resize, 300));

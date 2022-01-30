@@ -4,30 +4,40 @@ import IScene from "./IScene";
 
 export default class Menu extends Scene implements IScene {
 
-    private startButton: Button;
+    private _startButtonOptions: Button[] = [];
+    private _startButtonOptionsLabel: string[] = ["Cards", "ImageAndText", "Fire"];
 
     public init(): void {
-        this.startButton = new Button(this.app, 'CONTINUE');
+        for (let index: number = 0; index < 3; index++) {
+            const btn: Button = new Button(this.app, this._startButtonOptionsLabel[index]);
+            this.addChild(btn);
+            this._startButtonOptions.push(btn);
+
+        }
         this.addListenersOnContinueBtn(["click", "touchstart"]);
-        this.addChild(this.startButton);
     }
 
     private addListenersOnContinueBtn(allListeners: string[]): void {
-        allListeners.forEach((eventName: string) => {
-            this.startButton.on(eventName, () => { this.startGame() });
-        });
+        for (let index: number = 0; index < this._startButtonOptions.length; index++) {
+            allListeners.forEach((eventName: string) => {
+                this._startButtonOptions[index].on(eventName, () => { this.startGame(this._startButtonOptionsLabel[index]) });
+            });
+        }
     }
 
     public start(): void {
         this.resize();
     }
 
-    private startGame(): void {
-        this.scenes.start('gameplay');
+    private startGame(option: string): void {
+        this.scenes.start(option);
     }
 
     public resize(): void {
-        this.startButton.x = this.app.screen.width / 2;
-        this.startButton.y = this.app.screen.height / 2;
+        this._startButtonOptions.forEach((btn: Button, index: number) => {
+            btn.position.x = this.app.screen.width / 2;
+            btn.position.y = this.app.screen.height / 2 + ((btn.height + 5) * (index - 1));
+        });
+
     }
 }
