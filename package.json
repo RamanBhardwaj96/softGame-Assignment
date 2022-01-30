@@ -1,6 +1,6 @@
 {
   "name": "raman-assignment",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "assignmment",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.dev.js",
@@ -9,7 +9,7 @@
   "author": "Raman Bhardwaj",
   "license": "ISC",
   "dependencies": {
-    "gsap": "^3.7.0",
+    "gsap": "^3.9.1",
     "pixi-fps": "^2.0.1",
     "pixi-scenes": "^1.4.0",
     "pixi.js": "^5.1.3"

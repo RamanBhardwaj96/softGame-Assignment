@@ -45,7 +45,7 @@ function setup(): void {
     scenes.start('Splash');
 
     // Handle various window events
-    window.addEventListener('resize', Throttle(resize, 300));
+    window.addEventListener('resize', Throttle(resize, 100));
 }
 
 function resize(): void {
